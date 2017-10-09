@@ -1,0 +1,7 @@
+.main {
+  width: 80%;
+  float: right;
+  @media #{$mobile} {
+    width: 100%;
+  }
+}

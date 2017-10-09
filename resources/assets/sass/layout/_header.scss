@@ -1,0 +1,9 @@
+.header {
+  @include flex;
+  @include flex-align(justify, middle);
+  padding: 10px 40px;
+  border-bottom: 1px solid $header__borderColor;
+  @media #{$mobile} {
+    padding: 10px;
+  }
+}

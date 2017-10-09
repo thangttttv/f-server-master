@@ -1,0 +1,413 @@
+.p-landingDriver {
+  &--divider {
+    border-top: 1px solid $white;
+    width: 100%;
+  }
+  &-container {
+    width: 1152px;
+    max-width: 100%;
+    @include flex;
+    @include flex-align(justify, middle);
+  }
+  &-blockSection {
+    @include flex;
+    @include flex-align(justify, middle);
+  }
+  &-header {
+    @include flex;
+    @include flex-align(justify, middle);
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+    &--container {
+      @extend .p-landingDriver-container;
+      @include flex-grid-row(null, expand, 2, fasle, $gutter);
+      position: relative;
+    }
+    &--logo {
+      @include flex-grid-column(2, 0);
+      @media #{$mobile} {
+        padding-left: $gutter;
+      }
+    }
+    &--menu {
+      text-align: right;
+      @include flex;
+      @include flex-align(justify, middle);
+      @include flex-grid-column(10, 0);
+      margin-top: $gutter *2;
+      &List {
+        list-style: none;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 0;
+        @media #{$mobile} {
+          margin-top: $gutter * 2;
+        }
+      }
+      &Item {
+        display: inline-block;
+        margin-left: $gutter * 2;
+        a {
+          padding: $gutter $gutter*2;
+          font-family: "ProximaNova-Bold";
+          color: $black;
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+        @media #{$mobile} {
+          margin-left: $gutter;
+          a {
+            //font-family: "Proxima Nova";
+            font-size: 0.9em;
+            padding: 0;
+          }
+        }
+        &__bordered {
+          @extend .p-landingDriver-header--menuItem;
+          a {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 2px solid $border-red;
+            padding: $gutter $gutter*2;
+            font-family: "ProximaNova-Bold";
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  &-flags {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &-block-1 {
+    @extend .p-landingDriver-blockSection;
+    background: url("../images/landing_driver_bg1.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingDriver-container;
+      @include flex-grid-row(null, expand, 2, fasle, $gutter);
+      @include flex-align(justify, stretch);
+      padding-top: $gutter*5;
+    }
+    &--text {
+      @include flex-grid-column(6, 0);
+      font-family: "ProximaNova-Bold";
+      color: $white;
+      padding-bottom: $gutter*10;
+      &__header {
+        font-size: 4em;
+        text-transform: uppercase;
+      }
+    }
+    &--download {
+      @include flex-grid-row(null, expand, 2, fasle, 0);
+      &__code {
+        @include flex-grid-column(6, 0);
+        img {
+          width: 134px;
+          height: 134px;
+        }
+      }
+      &__store {
+        @include flex-grid-column(6, 0);
+        @include flex-direction(column);
+        div {
+          @include flex;
+          img {
+            height: 65px;
+            width: auto;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+    &--img {
+      @include flex-grid-column(6, 0);
+      background: url("../images/phone.png") no-repeat scroll center bottom -55px;
+    }
+  }
+  &-block-2 {
+    @extend .p-landingDriver-blockSection;
+    min-height: 600px;
+    background: url("../images/landing_driver_bg2.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingDriver-container;
+      @include flex-grid-row();
+    }
+    &--content {
+      text-align: center;
+      color: $white;
+      width: 60%;
+      margin: 0 auto;
+      &__header {
+        text-transform: capitalize;
+        font-size: 3em;
+        font-family: "ProximaNova-Bold";
+        letter-spacing: 5px;
+      }
+      &__text {
+        //font-size: 2em;
+        font-family: "ProximaNova-Semibold";
+      }
+      &__video {
+        @include responsive-embed(widescreen);
+      }
+      @media #{$mobile} {
+        width: 90%;
+      }
+    }
+  }
+  &-block-3 {
+    @extend .p-landingDriver-blockSection;
+    min-height: 500px;
+    background: url("../images/landing_agency_bg3.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingDriver-container;
+      @include flex-grid-row();
+    }
+    &--content {
+      @extend .p-landingDriver-block-2--content;
+      width: 90%;
+      &__header {
+        @extend .p-landingDriver-block-2--content__header;
+        margin-bottom: $gutter*4;
+      }
+      &__items {
+        @include flex-grid-row(null, expand, 2, fasle, 0);
+        img {
+          height: 100px;
+          width: auto;
+        }
+      }
+      &__item {
+        @include flex-grid-column(4, $gutter*4);
+        margin-bottom: $gutter*4;
+        h3 {
+          font-family: "ProximaNova-Semibold";
+        }
+      }
+    }
+  }
+  &-block-4 {
+    @extend .p-landingDriver-blockSection;
+    background: $white;
+    &--container {
+      @extend .p-landingDriver-container;
+      @include flex-grid-row();
+    }
+    &--content {
+      @include flex;
+      @include flex-align(justify, stretch);
+      width: 90%;
+      &__header {
+        @extend .p-landingDriver-block-2--content__header;
+        margin-top: $gutter*2;
+        width: 100%;
+        text-align: center;
+        color: $border_red;
+        margin-bottom: $gutter*2;
+      }
+    }
+    &--text {
+      @include flex-grid-column(6, 0);
+      padding-bottom: $gutter*4;
+      &__box1 {
+        &__header {
+          font-size: 2em;
+          font-family: "ProximaNova-Bold";
+          position: relative;
+          &:before {
+            content: "1";
+            @extend .list-number-style;
+          }
+        }
+        &__content {
+          position: relative;
+          &:before {
+            @extend .list-line;
+          }
+          &:after {
+            @extend .list-arrow;
+          }
+        }
+        &__download img {
+          display: inline-block;
+          height: 50px;
+          width: auto;
+        }
+      }
+      &__box2 {
+        &__header {
+          font-size: 2em;
+          font-family: "ProximaNova-Bold";
+          position: relative;
+          &:before {
+            content: "2";
+            @extend .list-number-style;
+          }
+        }
+        &__content {
+          position: relative;
+          &:before {
+            @extend .list-line;
+          }
+          &:after {
+            @extend .list-arrow;
+          }
+        }
+      }
+      &__box3 {
+        &__header {
+          font-size: 2em;
+          font-family: "ProximaNova-Bold";
+          position: relative;
+          &:before {
+            content: "3";
+            @extend .list-number-style;
+          }
+        }
+      }
+    }
+    &--img {
+      @include flex-grid-column(6, 0);
+      background: url("../images/phone_2.png") no-repeat scroll center bottom / contain;
+    }
+  }
+  &-block-6 {
+    @extend .p-landingDriver-blockSection;
+    min-height: 500px;
+    background: url("../images/landing_agency_bg5.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingDriver-container;
+      @include flex-grid-row();
+    }
+    &--content {
+      @extend .p-landingDriver-block-2--content;
+      width: 70%;
+    }
+    &--header {
+      @extend .p-landingDriver-block-2--content__header;
+      margin-bottom: $gutter*4;
+    }
+    &--download {
+      @extend .p-landingDriver-block-1--download;
+      &__code {
+        @extend .p-landingDriver-block-1--download__code;
+      }
+      &__store {
+        @extend .p-landingDriver-block-1--download__store;
+      }
+    }
+  }
+  &-footer {
+    @extend .p-landingDriver-blockSection;
+    background: $red;
+    color: $white;
+    &--content {
+      @extend .p-landingDriver-block-2--content;
+    }
+    &--menu {
+      ul {
+        list-style: none;
+        @include flex;
+        @include flex-align(justify, middle);
+        margin: $gutter*4 0;
+        li {
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+    &--divider {
+      @extend .p-landingDriver--divider;
+    }
+    &--social {
+      margin: $gutter*2 0;
+      @include flex;
+      justify-content: space-around
+    }
+  }
+  &-countDown {
+    @include flex;
+    @include flex-align(center, middle);
+    min-height: 600px;
+    background: url("../images/Countdown_Background.jpg") no-repeat scroll right bottom / cover;
+    color: white;
+    font-family: "ProximaNova-Bold";
+    font-size: 4em;
+    text-shadow: 2px 2px $black_light;
+    .time-box {
+      width: 150px;
+      height: 150px;
+      border: 1px solid #fff;
+      margin: 50px auto;
+      border-radius: 15px;
+      transform: rotate(45deg);
+    }
+
+    .time-count-container {
+      @include flex;
+      width: 100%;
+    }
+
+    .time_item {
+      @include flex-grid-column(3, 0);
+      text-align: center;
+    }
+
+    .time-box-inner {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      transform: rotate(-45deg);
+    }
+
+    .time-number {
+      font-size: 65px;
+      width: 100%;
+      display: inline-block;
+      font-weight: 300;
+      padding-top: 23%;
+      transition: all .25s;
+    }
+
+    .time-number .digit {
+      line-height: 60px;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    .time-name {
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .time-until {
+      text-align: center;
+      margin: 0;
+    }
+
+    .time-until span {
+      color: #fff;
+      font-size: 18px;
+      line-height: 40px;
+      display: inline-block;
+      background-color: #3498db;
+      text-transform: uppercase;
+      padding: 0 25px;
+    }
+  }
+}

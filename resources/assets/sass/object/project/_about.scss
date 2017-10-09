@@ -1,0 +1,53 @@
+.p-aboutUs {
+  text-align: center;
+  &-container {
+    width: 1152px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  &-header {
+    font-family: "ProximaNova-Bold";
+    color: $red;
+    margin-top: $gutter*4;
+    margin-bottom: $gutter*4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  &-desc {
+    margin-bottom: $gutter*2;
+    letter-spacing: 1px;
+    font-family: "ProximaNova-Bold";
+  }
+  &-banner {
+    img {
+      width: 100%;
+    }
+  }
+  &-office {
+    @include flex-grid-row(null, expand, 2, fasle, $gutter);
+    @include flex-align(justify, stretch);
+    text-align: left;
+    margin-top: $gutter*4;
+    &:last-child {
+      margin-bottom: $gutter*4;
+    }
+    &Map {
+      @include flex-grid-column(5, 0);
+    }
+    &Info {
+      @include flex-grid-column(7, 0);
+      letter-spacing: 1px;
+      &Location {
+        color: $red;
+        margin-bottom: $gutter*2;
+        font-family: "ProximaNova-Bold";
+      }
+      &Name {
+        font-family: "ProximaNova-Semibold";
+      }
+      &Detail {
+        font-family: "ProximaNova-Regular";
+      }
+    }
+  }
+}

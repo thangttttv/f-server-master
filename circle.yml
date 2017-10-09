@@ -1,0 +1,21 @@
+machine:
+  php:
+    version: 7.0.7
+
+  environment:
+    APP_ENV: testing
+    APP_KEY: base64:H2lnWgQiH23t04sHcwDZ8VbLqQCD5J8hpVMdylqDkp0=
+    DB_HOST: 127.0.0.1
+    DB_DATABASE: circle_test
+    DB_USERNAME: root
+    DYNAMODB_REGION: ap-northeast-1
+    DYNAMODB_LOCAL_ENDPOINT: https://dynamodb.ap-northeast-1.amazonaws.com/
+    DYNAMODB_LOCAL: false
+
+database:
+  override:
+    - php artisan migrate --no-interaction
+
+test:
+  override:
+    - vendor/bin/phpunit

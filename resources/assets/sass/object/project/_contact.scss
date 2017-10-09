@@ -1,0 +1,26 @@
+.p-contact{
+  padding-bottom: $gutter*4;
+  width: 600px;
+  margin: 0 auto;
+  &-header {
+    font-family: "ProximaNova-Bold";
+    color: $red;
+    text-align: center;
+    margin-top: $gutter*4;
+    margin-bottom: $gutter*4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  &-form {
+    font-family: "ProximaNova-Semibold";
+    letter-spacing: 1px;
+    input{
+      height: 60px;
+      letter-spacing: 1px;
+      padding: $gutter;
+    }
+    input[type="submit"]{
+      background: $border-red;
+    }
+  }
+}

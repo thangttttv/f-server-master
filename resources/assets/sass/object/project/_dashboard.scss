@@ -1,0 +1,72 @@
+.p-dashboard {
+  &--header {
+    @include flex;
+    @include flex-align(justify, middle);
+  }
+  &--brandLogo {
+    @include flex-grid-column(5, 0);
+    img {
+      max-width: 100%;
+    }
+    @media #{$mobile} {
+      @include flex-grid-column(6, 0);
+    }
+  }
+  &--btnAdd {
+    @include flex-grid-column(12, 0);
+    text-align: right;
+    button {
+      background: $btn--black__background;
+      border: none;
+      padding: 20px 25px;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 14px;
+      a{
+        color: $white;
+      }
+    }
+    @media #{$mobile} {
+      @include flex-grid-column(5, 0);
+      button{
+        padding: 10px;
+        text-transform: capitalize;
+      }
+    }
+  }
+  &--table{
+    table{
+      @include table(none);
+      font-family: 'ProximaNova-Semibold';
+      margin-top: 40px;
+      thead {
+        text-transform: uppercase;
+      }
+      tbody{
+        font-family:'ProximaNova-Regular';
+        color: $table--body__textColor;
+      }
+      td{
+        text-align: center !important;
+        border: 1px solid $table--border__color;
+      }
+      @media screen and (max-width: 1024px){
+        @include table-scroll;
+      }
+    }
+    @media #{$mobile} {
+      table{
+        margin-top: 20px;
+        thead{
+          td{
+            text-transform: none;
+          }
+        }
+        td{
+          padding: 10px !important;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

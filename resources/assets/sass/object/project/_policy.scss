@@ -1,0 +1,21 @@
+.p-policy {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding-bottom: $gutter*4;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  text-align: justify;
+  &-header {
+    font-family: "ProximaNova-Bold";
+    color: $red;
+    text-align: center;
+    margin-top: $gutter*4;
+    margin-bottom: $gutter*4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  &-content {
+    font-family: "ProximaNova-Semibold";
+    letter-spacing: 1px;
+  }
+}

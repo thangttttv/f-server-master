@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{!! \URLHelper::asset('css/app.css', 'advertiser') !!}">

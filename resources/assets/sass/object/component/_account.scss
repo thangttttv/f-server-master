@@ -1,0 +1,18 @@
+.c-account {
+  display: flex;
+  align-items: center;
+  &--avatar {
+    //width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  &--name{
+    font-family: 'ProximaNova-Semibold';
+    color: $black;
+  }
+  &--logout{
+    font-size: 1.5em;
+    color: $black;
+    margin-left: 20px;
+  }
+}

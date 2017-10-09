@@ -1,0 +1,74 @@
+{
+  "name": "flare/flare-server",
+  "description": "Flare Server.",
+  "keywords": [
+    "framework",
+    "laravel"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/framework": "5.4.*",
+    "laravel/tinker": "~1.0",
+    "predis/predis": "1.*",
+    "aws/aws-sdk-php": "3.12.*",
+    "facebook/graph-sdk": "5.3.*",
+    "abraham/twitteroauth": "0.6.*",
+    "maknz/slack": "^1.7",
+    "icanboogie/inflector": "^1.4",
+    "laravel/socialite": "^3.0",
+    "google/apiclient": "^2.0",
+    "dusterio/laravel-aws-worker": "^0.1.5",
+    "laravel/passport": "^2.0",
+    "baopham/dynamodb": "^0.4.0",
+    "ktamas77/firebase-php": "^2.2.0",
+    "webpatser/laravel-uuid": "^2.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~5.0",
+    "fzaninotto/faker": "^1.5",
+    "phpspec/phpspec": "~2.1",
+    "barryvdh/laravel-debugbar": "~2.1",
+    "barryvdh/laravel-ide-helper": "^2.1",
+    "symfony/css-selector": "3.1.*",
+    "symfony/dom-crawler": "3.1.*",
+    "doctrine/dbal": "~2.3",
+    "friendsofphp/php-cs-fixer": "^2.2",
+    "laravel/browser-kit-testing": "^1.0"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php",
+      "tests/Smokes/API/V1/TestCase.php"
+    ]
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postInstall",
+      "php artisan optimize"
+    ],
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+      "php artisan optimize"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
+}

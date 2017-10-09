@@ -1,0 +1,237 @@
+.p-landingAgency {
+  &--divider {
+    border-top: 1px solid $white;
+    width: 100%;
+  }
+  &-container {
+    width: 1152px;
+    max-width: 100%;
+    @include flex;
+    @include flex-align(justify, middle);
+  }
+  &-blockSection {
+    @include flex;
+    @include flex-align(justify, middle);
+  }
+  &-header {
+    @include flex;
+    @include flex-align(justify, middle);
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+    &--container {
+      @extend .p-landingAgency-container;
+      @include flex-grid-row(null, expand, 2, fasle, $gutter);
+      position: relative;
+    }
+    &--logo {
+      @include flex-grid-column(2, 0);
+      //text-align: center;
+    }
+    &--menu {
+      text-align: right;
+      @include flex;
+      @include flex-align(justify, middle);
+      @include flex-grid-column(10, 0);
+      &List {
+        list-style: none;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+      &Item {
+        display: inline-block;
+        margin-left: $gutter * 2;
+        a {
+          padding: $gutter $gutter*2;
+          font-family: "ProximaNova-Bold";
+          color: $black;
+        }
+        &__bordered {
+          @extend .p-landingAgency-header--menuItem;
+          a {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 2px solid $border-red;
+            padding: $gutter $gutter*2;
+            font-family: "ProximaNova-Bold";
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  &-block-1 {
+    @extend .p-landingAgency-blockSection;
+    min-height: 600px;
+    background: url("../images/landing_driver_countdown_bg.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingAgency-container;
+      @include flex-grid-row(null, expand, 1, fasle, $gutter);
+    }
+    &--content {
+      p {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 4em;
+        font-family: ProximaNova-Bold;
+      }
+      &__button {
+        padding: $gutter*2 $gutter*4;
+        border: 1px solid $border-white;
+        background: $red;
+        color: $white;
+        font-family: ProximaNova-Bold;
+        -webkit-border-radius: $gutter;
+        -moz-border-radius: $gutter;
+        border-radius: $gutter;
+        display: inline-block;
+      }
+    }
+  }
+  &-block-2 {
+    @extend .p-landingAgency-blockSection;
+    min-height: 600px;
+    background: url("../images/landing_agency_bg2.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingAgency-container;
+      @include flex-grid-row();
+    }
+    &--content {
+      text-align: center;
+      color: $white;
+      width: 60%;
+      margin: 0 auto;
+      &__header {
+        text-transform: capitalize;
+        font-size: 3em;
+        font-family: "ProximaNova-Bold";
+        letter-spacing: 5px;
+      }
+      &__text {
+        //font-size: 2em;
+        font-family: "ProximaNova-Semibold";
+      }
+      &__video {
+        @include responsive-embed(widescreen);
+      }
+    }
+  }
+  &-block-3 {
+    @extend .p-landingAgency-blockSection;
+    min-height: 600px;
+    background: url("../images/landing_agency_bg3.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingAgency-container;
+      @include flex-grid-row();
+    }
+    &--content {
+      @extend .p-landingAgency-block-2--content;
+      &__header {
+        @extend .p-landingAgency-block-2--content__header;
+        margin-top: $gutter*2;
+      }
+      &__items {
+        @include flex-grid-row(null, expand, 2, fasle, 0);
+      }
+      &__item {
+        @include flex-grid-column(6, $gutter*4);
+        margin-bottom: $gutter*4;
+        h3 {
+          font-family: "ProximaNova-Semibold";
+        }
+      }
+    }
+  }
+  &-block-4 {
+    @extend .p-landingAgency-blockSection;
+    background: $white;
+    &--container {
+      @extend .p-landingAgency-container;
+      @include flex-grid-row();
+    }
+    &--content {
+      @extend .p-landingAgency-block-2--content;
+      &__header {
+        @extend .p-landingAgency-block-2--content__header;
+        margin-top: $gutter*2;
+        color: $red;
+        width: 100%;
+        text-align: center;
+      }
+      &__items {
+        @include flex-grid-row(null, expand, 5, fasle, 0);
+      }
+      &__item {
+        @include flex;
+        @include flex-align(justify, middle);
+        width: 20%;
+        padding: $gutter*2;
+        margin-bottom: $gutter*4;
+        img {
+          //height: 100%;
+          //width: 100%;
+        }
+      }
+    }
+  }
+  &-block-5 {
+    @extend .p-landingAgency-blockSection;
+    min-height: 330px;
+    background: url("../images/landing_agency_bg5.jpg") scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--container {
+      @extend .p-landingAgency-container;
+      @include flex-grid-row();
+      color: $white;
+    }
+    &--content {
+      @extend .p-landingAgency-block-2--content;
+      &__header {
+        @extend .p-landingAgency-block-2--content__header;
+        margin-top: $gutter;
+        margin-bottom: $gutter;
+        text-align: center;
+      }
+      &__button {
+        @extend .p-landingAgency-block-1--content__button;
+      }
+    }
+  }
+  &-footer {
+    @extend .p-landingAgency-blockSection;
+    background: $red;
+    color: $white;
+    &--content {
+      @extend .p-landingAgency-block-2--content;
+    }
+    &--menu {
+      ul {
+        list-style: none;
+        @include flex;
+        @include flex-align(justify, middle);
+        margin: $gutter*4 0;
+        li {
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+    &--divider {
+      @extend .p-landingAgency--divider;
+    }
+    &--social {
+      margin: $gutter*2 0;
+      @include flex;
+      justify-content: space-around
+    }
+  }
+}

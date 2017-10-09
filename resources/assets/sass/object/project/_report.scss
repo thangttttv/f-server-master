@@ -1,0 +1,35 @@
+.p-report {
+  &--table {
+    table {
+      @include table(none);
+      font-family: 'ProximaNova-Semibold';
+      thead {
+        text-transform: uppercase;
+      }
+      tbody {
+        font-family: 'ProximaNova-Regular';
+        color: $table--body__textColor;
+      }
+      td {
+        text-align: center !important;
+        border: 1px solid $table--border__color;
+        max-width: 250px;
+      }
+    }
+    @media #{$mobile} {
+      table{
+        thead{
+          text-transform: none;
+        }
+        td{
+          padding: 10px !important;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &--summary {
+    @include flex-grid-row(null, expand, 3, fasle, $gutter);
+    @include flex-grid-layout(3, '.c-summary-flexCol');
+  }
+}

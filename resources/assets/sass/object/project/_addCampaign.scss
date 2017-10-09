@@ -1,0 +1,44 @@
+.p-addCampaign {
+  &-row {
+    @include flex-grid-row(null, expand, 2, true, 15px) {
+    }
+    @include flex-align(center, middle);
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &-label {
+    @include flex-grid-column(2, 0);
+  }
+  &-input {
+    @include flex-grid-column(10, 0);
+    position: relative;
+    input {
+      margin: 0;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+    label.error{
+      position: absolute;
+      top: 100%;
+      color: $black_lighter;
+    }
+  }
+  &-btn{
+    width: 100px;
+    height: 50px;
+    &--cancel {
+      @extend .p-addCampaign-btn;
+      @include button(false, $white, $white_darken, $black, solid);
+      border: 1px solid black;
+      line-height: inherit;
+    }
+    &--add {
+      @extend .p-addCampaign-btn;
+      @include button(false, $black_light, $black_lighter, $white, solid);
+      margin-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.p-driver{
+  &--dropdown{
+    padding-bottom: 25px;
+  }
+  &--summary {
+    @include flex-grid-row(null, expand, 4, fasle, $gutter);
+    @include flex-grid-layout(4, '.c-summary-flexCol');
+    @media #{$mobile} {
+      @include flex-grid-row(null, expand, 2, fasle, $gutter);
+      @include flex-grid-layout(2, '.c-summary-flexCol');
+    }
+  }
+}

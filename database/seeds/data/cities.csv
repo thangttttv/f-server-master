@@ -1,0 +1,24 @@
+"id","country_code","name_en","name_local","order"
+1,"jp","Tokyo","東京",1
+2,"jp","Fukuoka","福岡",2
+3,"jp","Osaka","大阪",3
+4,"jp","Nagoya","名古屋",4
+5,"th","Bangkok","กรุงเทพมหานคร",5
+6,"th","Chiang Mai","เชียงใหม่",6
+7,"th","Pattaya","พัทยา",7
+8,"th","Chon buri","ชลบุรี",8
+9,"th","Samuk","แชมพูสระผม",9
+10,"th","Prakan","พระโขนง",10
+11,"th","Sathon","สาทร",11
+12,"th","Chachone","ฉะเชิงเทรา",12
+13,"th","Krabang","บ่อน้ำ",13
+14,"th","Surakab","บ่อน้ำ",14
+15,"th","Rayrong","สระ",15
+16,"th","Kham","ขาม",16
+17,"th","Nong","หนอง",17
+18,"th","Pune","ปูน",18
+19,"th","Lakuale","อ่างเก็บน้ำ",19
+20,"th","Kolan","บ่อน้ำ",20
+21,"th","Chanthong","บ่อน้ำ...",21
+22,"th","Bangkok","กรุงเทพมหานคร",22
+23,"th","Nakhom","จังหวัด",23

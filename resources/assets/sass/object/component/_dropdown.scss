@@ -1,0 +1,15 @@
+.c-dropdown {
+  .menu {
+    li {
+      background: $black_light;
+      a {
+        color: $white;
+        padding: 20px;
+        padding-right: 5em !important;
+        &:after{
+          right:15px !important;
+        }
+      }
+    }
+  }
+}

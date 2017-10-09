@@ -1,0 +1,25 @@
+.p-faq {
+  width: 1152px;
+  margin: 0 auto;
+  padding-bottom: $gutter*4;
+  &-header {
+    font-family: "ProximaNova-Bold";
+    color: $red;
+    text-align: center;
+    margin-top: $gutter*4;
+    margin-bottom: $gutter*4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  &-content {
+    font-family: "ProximaNova-Semibold";
+    letter-spacing: 1px;
+    &--title{
+      color: $red;
+      font-size: 1.5em;
+      &:hover, &:focus{
+        color: $black_light;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.c-formBox {
+  &-header {
+    text-align: center;
+  }
+  &-input {
+    margin-bottom: 1.5em;
+    &Text {
+      @extend .c-formBox-input;
+      border-radius: 5px;
+      &.error{
+        margin-bottom: 0;
+      }
+    }
+    &Select{
+      @extend .c-formBox-input;
+      height: 60px;
+      border-radius: 5px;
+    }
+  }
+  &-button {
+    &__resetPassword {
+      @include button-expand(true);
+      @include button-style($black-light, auto, $white);
+      border: 1px solid $border_white;
+    }
+  }
+  label.error{
+    display: block;
+    color: $white;
+  }
+}

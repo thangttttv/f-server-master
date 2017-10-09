@@ -1,0 +1,35 @@
+.sideNav {
+  //@include flex-grid-column(4, 0);
+  background: $sideNav__backgroundColor;
+  text-align: center;
+  padding-top: 20px;
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  z-index: 9999;
+  &-close{
+    display: none;
+  }
+  @media #{$mobile} {
+    width: 50%;
+    right: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    &.active{
+      right: 50%;
+    }
+    &-close{
+      display: block;
+      color: white;
+      position: absolute;
+      left: 10px;
+      top: 35px;
+      z-index: 1;
+    }
+  }
+
+}
+

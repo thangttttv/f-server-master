@@ -1,0 +1,25 @@
+.c-breadcrumbs {
+  display: flex;
+  align-items: center;
+  ul {
+    display: block;
+    margin: 0;
+    li {
+      display: inline-block;
+      &:before {
+        content: '>';
+        color: $breadcrumbs__textColor;
+        margin-right: 5px;
+        margin-left: 2px;
+      }
+      &:first-child::before {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        color: $breadcrumbs__textColor;
+        font-family: "ProximaNova-Semibold";
+      }
+    }
+  }
+}

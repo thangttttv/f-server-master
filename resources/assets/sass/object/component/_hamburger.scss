@@ -1,0 +1,7 @@
+.c-hamburger {
+  display: none;
+  @media #{$mobile} {
+    display: block;
+    margin-right: 10px;
+  }
+}

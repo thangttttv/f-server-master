@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "FontAwesome";
+    src: url("FontAwesome.eot");
+    src: url("FontAwesome.eot?#iefix") format("embedded-opentype"),
+         url("FontAwesome.woff2") format("woff2"),
+         url("FontAwesome.woff") format("woff"),
+         url("FontAwesome.ttf") format("ttf"),
+         url("FontAwesome.svg#FontAwesome") format("svg");
+    font-style: normal;
+    font-weight: roman;
+}

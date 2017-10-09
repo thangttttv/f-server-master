@@ -1,0 +1,83 @@
+//Variable
+
+//Screen breakpoint
+$mobile: "only screen and (max-width : 425px)";
+$tablet: "only screen and (max-width : 1024px)";
+
+//Text color
+$white: #ffffff;
+$white_darken: #f5f7f8;
+$red: #ea3f5f;
+$black: #000000;
+$black_lighter: #34474f;
+$black_light: #3c3c3c;
+$border_white: #d7e0f1;
+$border_red: #d93d60;
+$gutter: 10px;
+//Header
+$header__borderColor: #ebebeb;
+
+//Sidenav
+$sideNav__backgroundColor: $black_light;
+$sideNav__textColor: #ffffff;
+
+//SideMenu
+$sideMenu__item--active: #192125;
+
+//Breadcrumbs
+$breadcrumbs__textColor: $black_lighter;
+
+//Button
+$btn--black__background: $black_light;
+
+//Table
+$table-is-striped: false;
+$show-header-for-stacked: true;
+$table-head-background: #e7818f;
+$table-padding: 20px;
+$table-head-font-color: $white;
+$table-border: 1px solid $border_white;
+$table--border__color: $border_white;
+$table--body__textColor: $black_lighter;
+
+//Dropdown
+$dropdownmenu-arrow-color: $white;
+$dropdownmenu-background: $black_light;
+$dropdownmenu-border: none;
+
+//Function
+
+.list-number-style {
+  position: absolute;
+  left: -50px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-size: 20px;
+  top: 2px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.list-line {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 5px;
+  width: 40px;
+  height: -webkit-calc(100% - 16px);
+  background: url("../images/line.jpg") repeat-y center center;
+}
+
+.list-arrow {
+  content: "";
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+  width: 40px;
+  height: 16px;
+  background: url("../images/arrow.png") no-repeat center bottom;
+}
